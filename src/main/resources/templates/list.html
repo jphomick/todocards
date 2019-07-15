@@ -5,7 +5,7 @@
     <title>To-Do List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
-<body>
+<body style="background-color: lightsteelblue">
 <div class="container">
 <h3><a href="/add">Schedule new Task</a></h3>
 <div class="row" style="align-content: center">
@@ -20,9 +20,9 @@
         <img th:if="${task.completed}" width="50" height="50" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/215/heavy-check-mark_2714.png"/>
     </p>
     <p>
-        <a th:href="@{/view/{id}(id=${task.id})}">View</a>
-        <a th:href="@{/update/{id}(id=${task.id})}">Update</a>
-        <a th:href="@{/complete/{id}(id=${task.id})}">Complete</a>
+        <a class="btn btn-primary btn-sm" th:href="@{/view/{id}(id=${task.id})}">View</a>
+        <a class="btn btn-primary btn-sm" th:href="@{/update/{id}(id=${task.id})}">Update</a>
+        <a class="btn btn-primary btn-sm" th:href="@{/complete/{id}(id=${task.id})}">Complete</a>
     </p>
         </div>
     </div>
